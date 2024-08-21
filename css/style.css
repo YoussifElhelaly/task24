@@ -1,0 +1,100 @@
+/* start rules  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+/* end rules  */
+
+nav.navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15px;
+    background-color: white;
+    z-index: 999999;
+    padding: 25px 10px;
+    border-radius: 5px;
+}
+
+
+/* start home  */
+
+.home {
+    height: 100vh;
+    background-image: url(../imgs/xhero_2.jpg.pagespeed.ic._xYTRIlPTB.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+}
+.home::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.197);
+    inset : 0;
+    z-index: 0;
+}
+
+.home .container {
+    position: relative;
+    z-index: 1;
+} 
+
+.home form {
+    background-color: rgba(255, 255, 255, 0.42);
+}
+
+/* end home  */
+
+.featured .boxs {
+    background-color: red;
+    border-radius: 10px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 2;
+}
+
+.featured .boxs .box {
+    background-color: red;
+    padding: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.featured .boxs .box:hover {
+    transform: translateY(-20px);
+}
+
+.products .container .boxs .card {
+    overflow: hidden;
+}
+
+.products .container .boxs .card .img {
+    position: relative;
+    transition: 0.3s;
+}
+
+.products .container .boxs .card .img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.355);
+}
+
+.products .container .boxs .card:hover .img {
+    transform: scale(1.1);
+}
+
+.products .container .boxs .card .card-img-overlay{
+    inset: unset;
+    bottom: 0;
+}
